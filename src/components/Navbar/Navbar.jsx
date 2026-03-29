@@ -1,7 +1,7 @@
 import React from 'react';
 import { IoIosLogIn } from 'react-icons/io';
 import { IoCartOutline } from 'react-icons/io5';
-import PrimaryButton from '../PrimaryButton/PrimaryButton';
+import PrimaryButton from '../Buttons/PrimaryButton';
 
 const Navbar = () => {
     return (
