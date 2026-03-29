@@ -6,7 +6,7 @@ import { IoPlayOutline } from 'react-icons/io5';
 
 const Banner = () => {
     return (
-        <div className='py-15 flex flex-col lg:flex-row gap-15 items-center'>
+        <div className='py-15 flex flex-col lg:flex-row gap-15 items-center w-[95%] lg:container mx-auto'>
             {/* Banner Left */}
             <div>
                 <div className='bg-[#E1E7FF] w-73.5 py-2 px-4 rounded-4xl flex gap-2 items-center'>
