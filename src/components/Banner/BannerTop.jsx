@@ -22,7 +22,9 @@ const Banner = () => {
                 <h1 className='font-extrabold mt-4 text-4xl sm:text-5xl lg:text-7xl text-brand-primary'>Supercharge Your <br /> Digital Workflow</h1>
                 <p className='text-lg/normal text-brand-secondary mt-4'>Access premium AI tools, design assets, templates, and productivity software—all in one place. Start creating faster today. <br /> Explore Products</p>
                 <div className='mt-8 flex gap-4 items-center'>
-                    <PrimaryButton>Explore Products</PrimaryButton>
+                    <div className='w-41.25'>
+                        <PrimaryButton>Explore Products</PrimaryButton>
+                    </div>
                     <OutlineButton><IoPlayOutline size='1.2rem' color='#4f39f6' /> Watch Demo</OutlineButton>
                 </div>
             </div>

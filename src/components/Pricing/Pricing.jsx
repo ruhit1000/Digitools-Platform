@@ -22,7 +22,7 @@ const Pricing = () => {
                             <li>1 project per month</li>
                         </ul>
                     </div>
-                    <button className='bg-linear w-full py-3 rounded-full font-bold text-base-100 cursor-pointer hover:-translate-y-1 transition-all duration-300 hover:shadow-xl'>Get Started Free</button>
+                    <PrimaryButton>Get Started Free</PrimaryButton>
                 </div>
                 <div className='p-6 rounded-2xl flex flex-col justify-between text-base-100 w-95 h-full bg-linear border-2 border-[#F2F2F2]'>
                     <div className='relative'>
@@ -55,7 +55,7 @@ const Pricing = () => {
                             <li>Custom branding</li>
                         </ul>
                     </div>
-                    <button className='bg-linear w-full py-3 rounded-full font-bold text-base-100 cursor-pointer hover:-translate-y-1 transition-all duration-300 hover:shadow-xl'>Contact Sales</button>
+                    <PrimaryButton>Contact Sales</PrimaryButton>
                 </div>
             </div>
         </div>

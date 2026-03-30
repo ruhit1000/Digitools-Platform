@@ -36,7 +36,9 @@ const Navbar = () => {
             <div className="navbar-end gap-1">
                 <button className='btn btn-ghost'><IoCartOutline size='1.3rem' /></button>
                 <button className='btn btn-ghost hidden sm:flex'>Login <IoIosLogIn size='1.3rem' /></button>
-                <PrimaryButton>Get Started</PrimaryButton>
+                <div className='w-31'>
+                    <PrimaryButton>Get Started</PrimaryButton>
+                </div>
             </div>
         </header>
     );
