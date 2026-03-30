@@ -2,7 +2,8 @@ import React from 'react';
 import tick from '../../assets/tick.png'
 import PrimaryButton from '../Buttons/PrimaryButton';
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, handleCart, cart }) => {
+    const existingProduct = cart.find((i) => i.id === product.id)
     return (
         <div className='border-2 max-w-95 border-base-300 p-6 rounded-2xl flex flex-col justify-between'>
             <div className='relative'>
@@ -11,8 +12,8 @@ const ProductCard = ({ product }) => {
                 ${product.tagType === 'popular' && 'badge-primary'}
                 ${product.tagType === 'new' && 'badge-success'}
                     `}>
-                        {product.tag}
-                    </div>
+                    {product.tag}
+                </div>
                 <div className='w-15 h-15 p-3 flex items-center justify-center border border-base-300 rounded-full mb-4'>
                     <img src={product.icon} alt="" />
                 </div>
@@ -25,7 +26,13 @@ const ProductCard = ({ product }) => {
                     <li>Grammar checker</li>
                 </ul>
             </div>
-            <PrimaryButton>Buy Now</PrimaryButton>
+            {
+                existingProduct ? (
+                    <button className='font-semibold bg-[#79AE6F] text-base-100 py-3 rounded-3xl cursor-pointer'>Product added to cart</button>
+                ) : (
+                    <PrimaryButton onClick={handleCart} product={product}>Buy Now</PrimaryButton>
+                )
+            }
         </div>
     );
 };

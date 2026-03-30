@@ -1,7 +1,8 @@
 import React, { use, useState } from 'react';
 import ProductCard from '../ProductCard/ProductCard';
+import CartSection from '../CartSection/CartSection';
 
-const Products = ({ productsPromise }) => {
+const Products = ({ productsPromise, handleCart, cart, total, handleRemove }) => {
     const productsRes = use(productsPromise);
     const products = productsRes.data;
 
@@ -37,15 +38,21 @@ const Products = ({ productsPromise }) => {
                         className={`relative z-10 flex-1 py-3 text-center rounded-3xl cursor-pointer transition-colors duration-300 font-semibold
             ${selectedTab === 'cart' ? 'text-base-100' : 'bg-linear bg-clip-text text-transparent hover:scale-105'}`}
                     >
-                        Cart(2)
+                        Cart({cart.length})
                     </button>
                 </div>
             </div>
-            <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-7.5 max-w-300 mx-auto place-items-center'>
-                {
-                    products.map((product) => <ProductCard key={product.id} product={product} />)
-                }
-            </div>
+            {
+                selectedTab === 'products' ? (
+                    <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-7.5 max-w-300 mx-auto place-items-center'>
+                        {
+                            products.map((product) => <ProductCard cart={cart} handleCart={handleCart} key={product.id} product={product} />)
+                        }
+                    </div>
+                ) : (
+                    <CartSection handleRemove={handleRemove} cart={cart} total={total} />
+                )
+            }
         </div>
     );
 };

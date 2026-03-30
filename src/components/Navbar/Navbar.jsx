@@ -3,7 +3,7 @@ import { IoIosLogIn } from 'react-icons/io';
 import { IoCartOutline } from 'react-icons/io5';
 import PrimaryButton from '../Buttons/PrimaryButton';
 
-const Navbar = () => {
+const Navbar = ({ cart }) => {
     return (
         <header className="navbar bg-base-100 shadow-sm font-semibold text-brand-primary">
             <div className="navbar-start">
@@ -34,8 +34,15 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-1">
-                <button className='btn btn-ghost'><IoCartOutline size='1.3rem' /></button>
-                <button className='btn btn-ghost hidden sm:flex'>Login <IoIosLogIn size='1.3rem' /></button>
+                <div className='relative'>
+                    {
+                        cart.length > 0 && <div className='absolute right-4 bg-linear py-0.5 px-1 rounded-full z-5'>
+                            <p className='text-xs text-base-100'>{cart.length}</p>
+                        </div>
+                    }
+                    <button className='btn btn-ghost z-10'><IoCartOutline size='1.5rem' /></button>
+                </div>
+                <button className='btn btn-ghost hidden sm:flex'>Login <IoIosLogIn size='1.5rem' /></button>
                 <div className='w-31'>
                     <PrimaryButton>Get Started</PrimaryButton>
                 </div>
