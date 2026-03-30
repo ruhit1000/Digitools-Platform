@@ -1,20 +1,22 @@
 import React from 'react';
 import Navbar from './components/Navbar/Navbar';
-import Banner from './components/Banner/Banner';
+import BannerTop from './components/Banner/BannerTop';
 import Stats from './components/Stats/Stats';
 import Footer from './components/Footer/Footer';
 import Pricing from './components/Pricing/Pricing';
 import GetStarted from './components/GetStarted/GetStarted';
+import BannerBottom from './components/Banner/BannerBottom';
 
 const App = () => {
   return (
     <>
       <Navbar />
       <main>
-        <Banner />
+        <BannerTop />
         <Stats />
         <GetStarted />
         <Pricing />
+        <BannerBottom />
       </main>
       <Footer />
     </>

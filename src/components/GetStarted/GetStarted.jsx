@@ -9,7 +9,7 @@ const GetStarted = () => {
             <div className='text-center w-[95%] lg:container mx-auto'>
                 <h2 className='font-extrabold text-5xl text-brand-primary mb-4'>Get Started In 3 Steps</h2>
                 <p className='text-brand-secondary mb-10'>Start using premium digital tools in minutes, not hours.</p>
-                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7.5 max-w-300 mx-auto'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-7.5 max-w-300 mx-auto place-items-center'>
                     <div className='p-5 rounded-2xl w-95 h-95 bg-base-100 border-[#F1F1F1] border-2 hover:shadow transition-all duration-300'>
                         <div className='bg-linear rounded-full w-10 h-10 text-base-100 flex items-center justify-center ml-auto mb-7'>
                             <p className='text-sm'>01</p>
