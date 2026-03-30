@@ -7,12 +7,12 @@ const BannerBottom = () => {
             <p className='opacity-90'>Join thousands of professionals who are already using Digitools to work smarter. <br /> Start your free trial today.</p>
             <div className='mt-10 mb-3'>
                 <button
-                className='bg-base-100 py-3 px-4 rounded-3xl text-[#9514FA] font-semibold'
+                className='bg-base-100 py-3 px-4 rounded-3xl text-[#9514FA] font-semibold hover:-translate-y-1 cursor-pointer transition-all duration-300 shadow-2xl'
                 >
                     Explore Products
                 </button>
                 <button
-                className='py-3 px-4 rounded-3xl font-semibold border border-base-100 ml-4'
+                className='py-3 px-4 rounded-3xl font-semibold border border-base-100 ml-4 hover:-translate-y-1 cursor-pointer transition-all duration-300 shadow-2xl'
                 >
                     View Pricing
                 </button>

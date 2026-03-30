@@ -19,13 +19,13 @@ const App = () => {
   const handleCart = (product) => {
     setCart((prevCart) => [...prevCart, product])
     setTotal((prevTotal) => prevTotal + product.price)
-    toast.success('Product added to cart', { position: "top-left" })
+    toast.success('Product added to cart', { position: "bottom-left" })
   }
 
   const handleRemove = (product) => {
     setCart((prevCart) => prevCart.filter((i) => i.id !== product.id))
     setTotal((prevTotal) => prevTotal - product.price)
-    toast.success('Product removed from your cart', { position: "top-left" })
+    toast.success('Product removed from your cart', { position: "bottom-left" })
   }
 
 
@@ -36,7 +36,7 @@ const App = () => {
         <BannerTop />
         <Stats />
         <Suspense fallback={<span className="loading loading-dots loading-xl mx-auto block my-15"></span>}>
-          <Products handleRemove={handleRemove} cart={cart} handleCart={handleCart} productsPromise={productsPromise} total={total} />
+          <Products handleRemove={handleRemove} cart={cart} setCart={setCart} handleCart={handleCart} productsPromise={productsPromise} total={total} setTotal={setTotal} />
         </Suspense>
         <GetStarted />
         <Pricing />

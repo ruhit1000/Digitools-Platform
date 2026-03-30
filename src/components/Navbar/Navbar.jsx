@@ -5,7 +5,7 @@ import PrimaryButton from '../Buttons/PrimaryButton';
 
 const Navbar = ({ cart }) => {
     return (
-        <header className="navbar bg-base-100 shadow-sm font-semibold text-brand-primary">
+        <header className="sticky top-0 z-50 navbar bg-base-100 shadow-sm font-semibold text-brand-primary">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -26,9 +26,9 @@ const Navbar = ({ cart }) => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 opacity-80">
-                    <li><a>Products</a></li>
+                    <li><a href='#products-section'>Products</a></li>
                     <li><a>Features</a></li>
-                    <li><a>Pricing</a></li>
+                    <li><a href='#pricing-section'>Pricing</a></li>
                     <li><a>Testimonials</a></li>
                     <li><a>FAQ</a></li>
                 </ul>

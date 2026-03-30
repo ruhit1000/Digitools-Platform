@@ -1,8 +1,16 @@
 import React from 'react';
 import PrimaryButton from '../Buttons/PrimaryButton';
 import CartProduct from './CartProduct';
+import { toast } from 'react-toastify';
 
-const CartSection = ({ cart, total, handleRemove }) => {
+const CartSection = ({ cart, total, handleRemove, setCart, setTotal }) => {
+    const handleCheckOut = () => {
+        setCart([]);
+        setTotal(0)
+        toast.success('Payment Success', { position: "bottom-left" })
+    }
+
+    
     return (
         <div className='p-10 max-w-300 mx-auto border border-base-300 rounded-2xl'>
             <h4 className='font-bold text-2xl text-brand-primary'>Your Cart</h4>
@@ -24,7 +32,7 @@ const CartSection = ({ cart, total, handleRemove }) => {
                 <p className='text-brand-secondary'>Total:</p>
                 <h4 className='font-bold text-2xl text-brand-primary'>${total}</h4>
             </div>
-            <PrimaryButton>Proceed to Checkout</PrimaryButton>
+            <PrimaryButton onClick={handleCheckOut} >Proceed to Checkout</PrimaryButton>
         </div>
     );
 };

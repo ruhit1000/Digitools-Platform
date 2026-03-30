@@ -21,9 +21,9 @@ const ProductCard = ({ product, handleCart, cart }) => {
                 <p className='text-brand-secondary'>{product.description}</p>
                 <p className='text-brand-secondary my-4'><span className='font-bold text-2xl text-brand-primary'>${product.price}</span>/{product.period}</p>
                 <ul style={{ listStyleImage: `url(${tick})` }} className='text-brand-secondary list-inside mb-4'>
-                    <li>Unlimited AI generations</li>
-                    <li>50+ writing templates</li>
-                    <li>Grammar checker</li>
+                    {
+                        product.features.map((item, index) => <li key={index}>{item}</li>)
+                    }
                 </ul>
             </div>
             {

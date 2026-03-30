@@ -2,7 +2,7 @@ import React, { use, useState } from 'react';
 import ProductCard from '../ProductCard/ProductCard';
 import CartSection from '../CartSection/CartSection';
 
-const Products = ({ productsPromise, handleCart, cart, total, handleRemove }) => {
+const Products = ({ productsPromise, handleCart, cart, total, handleRemove, setCart, setTotal }) => {
     const productsRes = use(productsPromise);
     const products = productsRes.data;
 
@@ -14,7 +14,7 @@ const Products = ({ productsPromise, handleCart, cart, total, handleRemove }) =>
 
 
     return (
-        <div className='py-30 w-[95%] lg:container mx-auto'>
+        <div id='products-section' className='py-30 w-[95%] lg:container mx-auto'>
             <div className='text-center mb-10'>
                 <h1 className='text-5xl font-extrabold text-brand-primary mb-4'>Premium Digital Tools</h1>
                 <p className='text-brand-secondary'>Choose from our curated collection of premium digital products designedto boost your productivity and creativity.</p>
@@ -50,7 +50,7 @@ const Products = ({ productsPromise, handleCart, cart, total, handleRemove }) =>
                         }
                     </div>
                 ) : (
-                    <CartSection handleRemove={handleRemove} cart={cart} total={total} />
+                    <CartSection handleRemove={handleRemove} cart={cart} setCart={setCart} total={total} setTotal={setTotal} />
                 )
             }
         </div>

@@ -4,7 +4,7 @@ import PrimaryButton from '../Buttons/PrimaryButton';
 
 const Pricing = () => {
     return (
-        <div className='py-30 w-[95%] lg:container mx-auto'>
+        <div id='pricing-section' className='py-30 w-[95%] lg:container mx-auto'>
             <div className='text-center space-y-4 mb-10'>
                 <h1 className='font-extrabold text-5xl text-brand-primary'>Simple, Transparent Pricing</h1>
                 <p className='text-brand-secondary'>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
