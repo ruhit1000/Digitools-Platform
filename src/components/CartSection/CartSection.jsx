@@ -5,12 +5,16 @@ import { toast } from 'react-toastify';
 
 const CartSection = ({ cart, total, handleRemove, setCart, setTotal }) => {
     const handleCheckOut = () => {
-        setCart([]);
-        setTotal(0)
-        toast.success('Payment Success', { position: "bottom-left" })
+        if (cart.length) {
+            setCart([]);
+            setTotal(0)
+            toast.success('Payment Success', { position: "bottom-left" })
+        } else {
+            toast.error('Add product to your cart first.', { position: "bottom-left" })
+        }
     }
 
-    
+
     return (
         <div className='p-10 max-w-300 mx-auto border border-base-300 rounded-2xl'>
             <h4 className='font-bold text-2xl text-brand-primary'>Your Cart</h4>
